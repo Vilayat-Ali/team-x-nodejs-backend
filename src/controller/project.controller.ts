@@ -21,6 +21,16 @@ try{
 }
 }
 
+// get all projects 
+export const getProject = async(req: Request, res: Response) => {
+    try{
+        const projects = await projectModel.find({});
+        res.json({status: "success", message: "Project created successfully.", data: projects}).status(200);
+    }catch(err: any){
+        res.json({status: "failed", message: err.message})
+    }
+    }
+
 // deleting a new project
 export const deleteProject = async(req: Request, res: Response) => {
     try{
