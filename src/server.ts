@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI!, () => {
 }
 
 // port configuration
-const port = Number(process.env.port || 8000);
+const port = Number(process.env.PORT || 8000);
 
 // configuring express app
 const app = express();
